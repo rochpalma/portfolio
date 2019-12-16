@@ -4,56 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML Wireframe</title>
+    <meta name="description" content="Rochelle Palma's portfolio">
+    <title>Rochelle Palma</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav role="navigation">
-       <ul>
-           <li>
-                <a href="#intro">Home</a>
-           </li>
-           <li>
-                <a href="#about">About</a>
-           </li>
-           <li>
-                <a href="#projects">Projects</a>
-           </li>
-       </ul>             
+    <nav role="navigation" class="navigation">
+        <div class="logo-container">
+            <img src="images/RochP.png" alt="portfolio logo" class="logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="#intro" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+            </ul>  
+        </div>
+        <button class="nav-toggler">
+            <span></span>
+        </button>              
     </nav>
     <main role="main">
         <section id="intro" class="main-display">
-            <header role="banner">
-                    <h1>Hello, I'm Roch.</h1>
-                    <p>Web Developer</p>
+            <header role="banner" class="main-container">
+                    <div class="header-left">
+                        <img src="images/GIRL.png" alt="avatar" class="avatar">
+                    </div>
+                    <div class="header-right">
+                        <h1>Hello, I'm Roch.</h1>
+                        <p>Web Developer</p>
+                    </div>                    
             </header> 
         </section>
-        <section id="about">
+        <section id="about" class="about-me">
             <h2>About Me</h2>
             <p>I'm currently a Web Development student at Bloc. I enjoy learning new things everyday and putting it together to make projects.</p>
-            <p>When I'm not programming, my free time is spent watching anime or playing with my dogs.</p>
-            <ul>
-                <li>
-                    <img src="images/icon_coding.png" alt="laptop icon" class="hobbies-icon">
-                </li>
-                <li>
-                    <img src="images/icon_book.png" alt="book icon" class="hobbies-icon">
-                </li>
-                <li>
-                    <img src="images/icon_video.png" alt="video icon" class="hobbies-icon">
-                </li>
-                <li>
-                    <img src="images/icon_dog.png" alt="dog icon"class="hobbies-icon"> 
-                </li>
-            </ul>     
+            <p class="last-p">When I'm not programming, my free time is spent watching anime or playing with my dogs.</p>
+            <div class="hobbies-container">  
+                <ul>
+                    <li>
+                        <img src="images/icon_coding.png" alt="laptop icon" class="hobbies-icon">
+                        <h3>Coding</h3>
+                    </li>
+                    <li>
+                        <img src="images/icon_book.png" alt="book icon" class="hobbies-icon">
+                        <h3>Studying</h3>
+                    </li>
+                    <li>
+                        <img src="images/icon_video.png" alt="video icon" class="hobbies-icon">
+                        <h3>Anime</h3>
+                    </li>
+                    <li>
+                        <img src="images/icon_dog.png" alt="dog icon" class="hobbies-icon"> 
+                        <h3>Dogs</h3>
+                    </li>
+                </ul>                              
+            </div>   
         </section>
         <section id="projects" class="project">
             <h2>Projects</h2>
             <div>
-                <img src="images/opm_quiz_app.png" alt="quiz app project screenshot">
-                <p>Title: One Punch Man Quiz App</p>
-                <p>Description: A short 10 quiz questions about the anime One Punch Man.</p>
-                <p class="one langs">Technologies Used: HTML, CSS, and JavaScript.</p>
+                <img src="images/opm_quiz_app.png" alt="quiz app project screenshot" class="proj-img">
+                <h3 class="title">One Punch Man Quiz App</h3>
+                <p>A short 10 quiz questions about the anime One Punch Man.</p>
+                <p>Technologies Used: HTML, CSS, and JavaScript.</p>
                 <div class="btn-container">
                     <a href="https://rochpalma.github.io/quiz-app/" target="_blank" class="btn">Demo</a>
                     <a href="https://github.com/rochpalma/quiz-app" target="_blank" class="btn">Code</a>
@@ -69,7 +90,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/" target="_blank">
+                <a href="https://www.linkedin.com/in/rochelle-palma-365865199/" target="_blank">
                     <img src="images/social_in.png" alt="linkedin icon" class="social-icon">
                 </a>
             </li>
@@ -81,5 +102,9 @@
         </ul> 
         <p>© Rochelle Palma</p>      
    </footer>
+   <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
