@@ -1,7 +1,7 @@
   * {
     box-sizing: border-box;
   }
-  
+
   body {
     background-color: #f7f7f9;
     font-size: 16px;
@@ -28,7 +28,6 @@
   .about-me li,
   footer ul li {
     display: inline;
-    
   }
 
   h1 {
@@ -37,7 +36,9 @@
 
   h2 {
     margin-top: 0;
+    text-transform: uppercase;
   }
+
 
   header {
     padding: 325px 0;
@@ -73,7 +74,7 @@
   .navigation .nav-toggler {
     display: none;
   }
-  
+
   /*buttons*/
   .btn {
     padding: 10px 40px;
@@ -114,7 +115,7 @@
   .main-container {
     padding: 35% 10%;
   }
-  
+
   .main-display {
     height: 100vh;
   }
@@ -122,11 +123,7 @@
   /*about-me section*/
   .about-me {
     background-color: #ff9292;
-    padding: 10% 15%;  
-  }
-
-  .last-p {
-    margin-bottom: 0;
+    padding: 10% 15%;
   }
 
   .hobbies-container {
@@ -144,11 +141,20 @@
     font-size: 20px;
     margin-bottom: 0;
   }
-  
+
   .project {
     background-color: #1b1b1d;
     color: #f7f7f9;
     padding: 10% 3%;
+  }
+
+  .project-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-box{
+    margin-bottom: 40px;
   }
 
   .proj-img {
@@ -163,18 +169,29 @@
   }
 
   /*footer section*/
+  i{
+    color: black;
+  }
+  i:hover{
+    color: #ff9292;
+  }
+
   footer p {
     font-size: 14px;
     margin: 0;
   }
 
+  footer ul {
+    margin-top: 10px;
+  }
+
   footer li {
     margin: 0 10px;
   }
-  
+
   .social-icon {
     margin-top: 10px;
-    height: 30px;      
+    height: 30px;
   }
 
   @media screen and (max-width: 750px) {
@@ -215,7 +232,7 @@
       padding: 0 5px;
       cursor: pointer;
     }
-    
+
     .navigation .nav-toggler span,
     .navigation .nav-toggler span::before,
     .navigation .nav-toggler span::after {
@@ -227,7 +244,7 @@
       border-radius: 4px;
       transition: all ease-in-out 0.3s;
     }
-    
+
     .navigation .nav-toggler span::before {
       transform: translateY(-8px);
     }
@@ -235,7 +252,7 @@
     .navigation .nav-toggler span::after {
       transform: translateY(5px);
     }
-    
+
     .navigation .nav-toggler.open-nav-toggler span {
       background-color: transparent;
     }
@@ -247,7 +264,7 @@
       transform: translateY(-3px) rotate(-45deg);
     }
   }
-  
+
   @media screen and (min-width: 750px) {
     body{
       font-size: 20px;
@@ -259,7 +276,7 @@
     }
 
     .avatar{
-      height: 600px;  
+      height: 600px;
       z-index: -1;
       position: relative;
     }
@@ -282,7 +299,7 @@
       font-size: 16px;
       display: flex;
       justify-content: flex-end;
-      margin-top: 15px; 
+      margin-top: 15px;
     }
 
     nav li {
@@ -293,16 +310,16 @@
     .nav-link:hover {
       color: #ff9292;
     }
-    
+
     nav,
     .header-right p,
     .title, .btn {
       text-transform: uppercase;
     }
-    
+
     /*about me section*/
     .about-me{
-      padding: 2.5% 25%;
+      padding: 10% 25%;
     }
 
     .hobbies-container{
@@ -335,6 +352,15 @@
       padding-bottom: 5%;
     }
 
+    .project-container{
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .project-box{
+      margin-bottom: 0;
+    }
+
     .project p{
       font-size: 18px;
     }
@@ -349,25 +375,18 @@
       margin-right: 20px;
     }
   }
-  
-  @media screen and (min-width:1000px) { 
-    body{
-      font-size: 20px;
-    }
-    
+
+  @media screen and (min-width:1000px) {
     /*intro me section*/
     h1{
       font-size: 60px;
     }
 
     .avatar{
-      height: 700px;  
-      z-index: -1;
-      position: relative;
+      height: 700px;
     }
 
     .main-container{
-      display: flex;
       padding: 0 12%;
     }
 
@@ -378,9 +397,7 @@
     .header-right{
       font-size: 32px;
       line-height: 55px;
-      text-align: left;
       margin-left: 40px;
-      align-self: center;
     }
 
     /*button*/
@@ -388,65 +405,7 @@
       margin-right: 20px;
     }
 
-    /*navigation section*/
-    .nav-links{
-      font-size: 16px;
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 15px;
-    }
-
-    nav li {
-      display: inline;
-      margin:0 18px;
-    }
-
-    .nav-link:hover {
-      color: #ff9292;
-    }
-    
-    nav,
-    .header-right p,
-    .title, .btn {
-      text-transform: uppercase;
-    }
-      
-    /*about me section*/
-    .about-me{
-      padding: 2.5% 25%;
-    }
-
     .hobbies-container{
       padding: 0 4.5%;
     }
-
-    .hobbies-container ul{
-      display: flex;
-      justify-content: center;
-    }
-
-    .hobbies-container li{
-      margin: 0 12px;
-    }
-
-    .hobbies-container h3{
-      margin-top: 0;
-      margin-bottom: 0;
-      font-size: 16px;
-    }
-
-    /*project section*/
-    .project{
-      padding: 2.5%;
-      padding-bottom: 5%;
-    }
-
-    .project p{
-      font-size: 18px;
-    }
-
-    .proj-img{
-      width: 400px;
-      height: 300px;
-    }    
   }
